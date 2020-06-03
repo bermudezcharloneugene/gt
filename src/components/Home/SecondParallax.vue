@@ -19,8 +19,8 @@ export default {
 
 <style scoped>
     .second-parallax {
-            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-            filter: grayscale(100%);
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
         min-height: 400px;
         background-attachment: fixed;
         background-position: center;

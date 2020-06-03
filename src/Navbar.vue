@@ -1,7 +1,7 @@
 <template>
     <div>
-      <b-navbar toggleable="lg" type="light" variant="light">
-        <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <b-navbar toggleable="lg" type="light" variant="light" fixed>
+        <b-navbar-brand href="#">EB</b-navbar-brand>
     
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     

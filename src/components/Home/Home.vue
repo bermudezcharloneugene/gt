@@ -1,6 +1,6 @@
 <template>
     <div >
-        <Header></Header>
+        <!-- <Header></Header> -->
         <first-parallax></first-parallax>
         <Content></Content>
         <second-parallax />
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Header from './Header';
+// import Header from './Header';
 import Content from './Content';
 import FirstParallax from './FirstParallax';
 import SecondParallax from './SecondParallax';
@@ -18,7 +18,7 @@ import FooterInformation from './FooterInformation';
 export default {
     name: 'Home',
     components: {
-        Header: Header,
+        // Header: Header,
         Content: Content,
         firstParallax: FirstParallax,
         secondParallax: SecondParallax,

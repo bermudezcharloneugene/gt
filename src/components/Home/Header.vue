@@ -1,8 +1,7 @@
 <template>
     <div class="header-section ">
         <slot>
-            <h1 class="header-text text-center p-5">Gene&Truth</h1>
-
+            <h1 class="header-text text-center p-5">Eugene Bermudez</h1>
         </slot>
     </div>
     
