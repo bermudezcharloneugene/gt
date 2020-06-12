@@ -8,7 +8,11 @@ import { faFilter } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VueRouter from 'vue-router';
 import { routes } from './routes';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import ScrollAnimation from './assets/js/animateOnScroll.js';
 
+Vue.directive('scrollanimation', ScrollAnimation);
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -30,4 +34,7 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
   router,
+  created() {
+    AOS.init()
+  }
 }).$mount('#app')
