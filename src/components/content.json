@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "skillName": "Back-End Development", 
+            "description": "Technologies, libraries or frameworks that I know",
+            "skillSet": "PHP, Laravel-Framework, NODE JS, Express"
+        },
+
+        {
+            "id": "2",
+            "skillName": "Front-End Development",
+            "description": "Technologies, libraries or frameworks that I know",
+            "skillSet": "Javascript ES5 and ES6, VueJS, ReactJS, and Jquery"
+        },
+
+        {
+            "id": "3",
+            "skillName": "Database and other skill set",
+            "description": "Database system, and other skill set that I know",
+            "skillSet": "MySQL, MongoDB, Firebase, Heroku, GIT, Photo and Video Editing, and Mobile Development(Ionic Framework)"
+        }
+    ]
+}
