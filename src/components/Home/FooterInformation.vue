@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <b-row>
+        <!-- <b-row>
             <b-col sm="12" md="4">
                 <p>Contact Me:</p>
                 <ul>
@@ -14,7 +14,8 @@
             <b-col sm="12" md="4">
                 asd
             </b-col>
-        </b-row>
+        </b-row> -->
+        <label for="">Copyright© 2020 Eugene Bermudez</label>
     </div>
 </template>
 
@@ -27,6 +28,7 @@ export default {
 <style scoped>
     .footer {
         background: black;
-        padding: 32px 60px 0px 60px; 
+        color: white;
+        padding: 16px 60px 0px 60px; 
     }
 </style>

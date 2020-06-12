@@ -1,23 +1,15 @@
 <template>
-    <div>
-        <slot>
+    <div class="mt-5">
+        <slot >
             <div class="parallax" :style="{ backgroundImage: `url(${backgroundUrl})` }"> 
                 <h1 class="parallax-text" >
                     <label 
                         class="p-3" 
-                        @mousemove="calcMousePos"
-                        @mouseleave="isOnHover = false"
                     >Experience The Truth</label> 
-                    </h1>
-                <div v-if="isOnHover === true" class="hoverable-text" :style="{ top: top, left: left}" >
-                    <h1>ASDASD</h1>
-                </div>
+                </h1>
             </div>
         </slot>
     </div>
-
-    
-    
 </template>
 
 <script>
@@ -25,27 +17,18 @@ import backgroundUrl from '../../assets/gt.jpg';
 
 export default {
     name: 'FirstParallax',
+    props: ['checkImage'],
     data() {
         return{
             backgroundUrl: backgroundUrl,
-            isOnHover: false,
-            top: 0,
-            left: 0
+        }
+    },
 
-        }
-    },
-    methods: {
-        calcMousePos(event) {
-            this.top = (event.pageY - 30) + 'px';
-            this.left = event.pageX + 'px';
-            this.isOnHover = true;
-        }
-    },
 
 }
 </script>
 
-<style>
+<style scoped>
     .parallax {
         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
@@ -70,5 +53,15 @@ export default {
         color: white;
         padding: 40px 50px 40px 50px;
 
+    }
+
+    .before-enter {
+        opacity: 0!important;
+        transition: opacity 1s !important;
+    }
+
+    .enter {
+        opacity: 1;
+        /* transition: opacity 1s; */
     }
 </style>

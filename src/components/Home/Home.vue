@@ -1,40 +1,83 @@
 <template>
-    <div >
-        <!-- <Header></Header> -->
-        <first-parallax></first-parallax>
-        <Content></Content>
-        <second-parallax />
-        <FooterInformation/>
+    <div class="mt-5">
+        <div class="container">
+            <div v-scrollanimation> 
+                <h1  class="text-center mt-3 text-style-1">
+                    Fullstack Web Developer
+                </h1>
+                <!-- <img  :src="profileImage" alt="..." class="img-thumbnail rounded mx-auto d-block img-size"> -->
+                <h5 class="text-center mt-3 text-style-1"  >
+                    Hello, I'm Eugene Bermudez
+                </h5>
+            </div>
+            <cards/>
+        </div>
+       <first-parallax />
+        <about  />
     </div>
 </template>
 
 <script>
-// import Header from './Header';
-import Content from './Content';
-import FirstParallax from './FirstParallax';
-import SecondParallax from './SecondParallax';
-import FooterInformation from './FooterInformation';
+
+import profileImage from '../../assets/Eugene.jpg'
+import divImage from '../../assets/gt.jpg'
+import cards from './Cards';
+import about from './About';
+import FirstParallax from './FirstParallax'
 
 export default {
     name: 'Home',
     components: {
-        // Header: Header,
-        Content: Content,
+        cards,
         firstParallax: FirstParallax,
-        secondParallax: SecondParallax,
-        FooterInformation
-    }
+        about
+    },
+    data() {
+        return {
+            profileImage: profileImage,
+            divImage: divImage,
+            showImage: false,
+        }
+    },
+    methods: {
+        showHeader() {
+            this.showImage = true
+        }
+    },
+    created() {
+        window.addEventListener("load", this.showHeader);
+    },
 }
 </script>
 
 <style >
-    .text-center {
-        text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+
+    .img-size {
+        height: 150px;
+        border-radius: 50%!important;
+        object-position: center;
+        object-fit: cover;
     }
 
-    .jumbotron {
-        background: #000000;
-        margin-bottom: 0px!important;
-        border: 0px!important;
+    .image-background {
+        height: 400px;
+        width: 100%;
+    }
+
+    .text-style-1 {
+        font-family: 'Inconsolata', monospace;
+    }
+
+    .before-enter {
+        transform: translateX(-300px);
+        opacity: 0;
+        transition: all 2s ease-out;
+    }
+
+    .enter {
+        transform: translateX(0px);
+        opacity: 1;
     }
 </style>
